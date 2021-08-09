@@ -110,6 +110,7 @@ class ImageMessage extends Message {
     Status? status,
     String? text,
     int? updatedAt,
+    String? uri
   }) {
     return ImageMessage(
       author: author,
@@ -127,7 +128,7 @@ class ImageMessage extends Message {
       size: size,
       status: status ?? this.status,
       updatedAt: updatedAt,
-      uri: uri,
+      uri: uri == null ? this.uri : uri,
       width: width,
     );
   }
